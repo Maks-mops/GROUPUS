@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIT | US GROUP — Независимый аудит и финансовая прозрачность</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Секции ── */
+        .audit-page .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 600;
+            color: #F5F0EB;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        /* ── Сетка услуг ── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(245, 240, 235, 0.07);
+            border: 1px solid rgba(245, 240, 235, 0.07);
+        }
+
+        .service-card {
+            background: #111;
+            padding: 36px 32px;
+            position: relative;
+            transition: background 0.3s;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #A0283A;
+            transition: width 0.4s;
+        }
+
+        .service-card:hover {
+            background: #161616;
+        }
+
+        .service-card:hover::after {
+            width: 100%;
+        }
+
+        .service-num {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: rgba(160, 40, 58, 0.25);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #F5F0EB;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: rgba(245, 240, 235, 0.58);
+            line-height: 1.75;
+        }
+
+        /* ── Бейджи ── */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+
+        .badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(160, 40, 58, 0.9);
+            border: 1px solid rgba(160, 40, 58, 0.3);
+            padding: 4px 10px;
+        }
+
+        /* ── Полоса статистики ── */
+        .stats-stripe {
+            background: #A0283A;
+            padding: 60px 0;
+        }
+
+        .stats-stripe-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            text-align: center;
+        }
+
+        .stat-stripe-item {
+            padding: 0 24px;
+            border-right: 1px solid rgba(245, 240, 235, 0.25);
+        }
+
+        .stat-stripe-item:last-child {
+            border-right: none;
+        }
+
+        .stat-stripe-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #F5F0EB;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-stripe-item p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+            color: rgba(245, 240, 235, 0.75);
+        }
+
+        /* ── Сетки Why Us / Standards ── */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            background: rgba(245, 240, 235, 0.06);
+            margin-top: 50px;
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: rgba(245, 240, 235, 0.06);
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background: #111;
+            padding: 40px 36px;
+        }
+
+        .why-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #A0283A;
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 300;
+            color: rgba(245, 240, 235, 0.6);
+            line-height: 1.75;
+        }
+
+        .standard-val {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #A0283A;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* ── Адаптив ── */
+        @media (max-width: 900px) {
+
+            .services-grid,
+            .standards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-stripe-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px 0;
+            }
+
+            .stat-stripe-item {
+                border-right: none;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 580px) {
+
+            .services-grid,
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-stripe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="audit-page">
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html#hero" class="logo">US GROUP</a>
+            <nav class="main-nav">
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#team" class="nav-link">Команда</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link">Подразделения ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="consult.html" class="dropdown-item">→ CONSULT</a>
+                        <a href="audit.html" class="dropdown-item">→ AUDIT</a>
+                        <a href="capital.html" class="dropdown-item">→ CAPITAL</a>
+                    </div>
+                </div>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="index.html#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">&times;</button>
+        <nav class="mobile-nav-links">
+            <a href="index.html#about" class="mobile-link">О нас</a>
+            <a href="index.html#team" class="mobile-link">Команда</a>
+            <a href="index.html#services" class="mobile-link">Подразделения</a>
+            <a href="consult.html" class="mobile-link sub-link">CONSULT</a>
+            <a href="audit.html" class="mobile-link sub-link">AUDIT</a>
+            <a href="capital.html" class="mobile-link sub-link">CAPITAL</a>
+            <a href="faq.html" class="mobile-link">FAQ</a>
+            <a href="index.html#contacts" class="mobile-link">Контакты</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="US GROUP AUDIT">
+            <div class="hero-bg" style="
+                background-image: url('hero-bg.jpg');
+                background-size: cover;
+                background-position: center 30%;
+                filter: grayscale(100%) brightness(0.5);
+                position: absolute;
+                inset: -20%;
+                top: -20%;
+                will-change: transform;
+                z-index: 0;
+            "></div>
+            <div class="hero-bg" style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.55) 0%,
+                    rgba(0,0,0,0.15) 45%,
+                    rgba(0,0,0,0.60) 100%
+                );
+                z-index: 1;
+                filter: none;
+            "></div>
+
+            <div class="container hero-content" style="position:relative; z-index:2;">
+                <p class="hero-mountain fade-in-up" style="
+                    font-family:'Montserrat',sans-serif;
+                    font-size:0.6rem; font-weight:400;
+                    letter-spacing:5px; text-transform:uppercase;
+                    color:rgba(255,255,255,0.45); margin-bottom:24px;
+                    text-shadow:0 1px 6px rgba(0,0,0,0.9);
+                ">← <a href="index.html" style="color:inherit;text-decoration:none;">US GROUP</a></p>
+
+                <h1 class="hero-title" style="text-align:center;">
+                    <span class="word-wrap">
+                        <span class="word-reveal hero-title-accent">US</span>
+                    </span>
+                    <span class="word-wrap">
+                        <span class="word-reveal" style="animation-delay:0.15s">GROUP</span>
+                    </span>
+                    <span class="word-wrap" style="display:block; font-size:0.55em;
+                        letter-spacing:0.2em; margin-top:8px; opacity:0.9;">
+                        <span class="word-reveal" style="animation-delay:0.3s">AUDIT</span>
+                    </span>
+                </h1>
+
+                <p class="hero-mountain fade-in-up delay-2" style="
+                    font-family:'Montserrat',sans-serif;
+                    font-size:0.6rem; font-weight:400;
+                    letter-spacing:5px; text-transform:uppercase;
+                    color:rgba(255,255,255,0.45); margin:16px 0 28px;
+                    text-shadow:0 1px 6px rgba(0,0,0,0.9);
+                    text-align:center;
+                ">Независимый аудит и финансовая прозрачность</p>
+
+                <div class="hero-tags fade-in-up delay-3" aria-label="Услуги: Финансовый аудит, МСФО, Due Diligence">
+                    <span class="hero-tag">Финансовый аудит</span>
+                    <span class="hero-tag-dot" aria-hidden="true">·</span>
+                    <span class="hero-tag">МСФО</span>
+                    <span class="hero-tag-dot" aria-hidden="true">·</span>
+                    <span class="hero-tag">Due Diligence</span>
+                </div>
+
+                <div style="text-align:center;">
+                    <button class="btn btn-primary open-modal fade-in-up delay-4" onclick="openModal()">
+                        Заказать аудит
+                    </button>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Перейти вниз">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-line-container fade-in-up" aria-hidden="true">
+                        <div class="about-line"></div>
+                    </div>
+                    <div class="about-text fade-in-up">
+                        <h2 class="section-title">О подразделении</h2>
+                        <p>US GROUP AUDIT — профессиональное аудиторское подразделение холдинга, обеспечивающее
+                            высочайший стандарт проверки финансовой деятельности.</p>
+                        <p>Наша цель — выход за рамки формальной отчетности. Мы фокусируемся на глубоком анализе
+                            бизнес-процессов, выявлении скрытых налоговых рисков и подготовке прозрачной финансовой
+                            структуры, соответствующей международным стандартам МСФО, что укрепляет доверие инвесторов и
+                            партнеров.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding" style="background: #111;">
+            <div class="container">
+                <h2 class="section-title text-center fade-in-up">Наши услуги</h2>
+                <div class="services-grid" style="margin-top: 60px;">
+                    <!-- 01 -->
+                    <div class="service-card fade-in-up">
+                        <span class="service-num">01</span>
+                        <h3>Обязательный аудит</h3>
+                        <p>Подтверждение достоверности годовой финансовой отчётности в строгом соответствии с
+                            требованиями законодательства КР.</p>
+                        <div class="badge-container">
+                            <span class="badge">Закон</span>
+                            <span class="badge">Отчётность</span>
+                        </div>
+                    </div>
+                    <!-- 02 -->
+                    <div class="service-card fade-in-up delay-1">
+                        <span class="service-num">02</span>
+                        <h3>Инициативный аудит</h3>
+                        <p>Добровольная независимая проверка по запросу собственников или инвесторов для оценки
+                            реального состояния дел.</p>
+                        <div class="badge-container">
+                            <span class="badge">Инвест-контроль</span>
+                            <span class="badge">Проверка</span>
+                        </div>
+                    </div>
+                    <!-- 03 -->
+                    <div class="service-card fade-in-up delay-2">
+                        <span class="service-num">03</span>
+                        <h3>Налоговый аудит</h3>
+                        <p>Глубокий анализ налоговых обязательств, выявление переплат и минимизация рисков перед
+                            проверками регуляторов.</p>
+                        <div class="badge-container">
+                            <span class="badge">Налоги</span>
+                            <span class="badge">Риски</span>
+                        </div>
+                    </div>
+                    <!-- 04 -->
+                    <div class="service-card fade-in-up">
+                        <span class="service-num">04</span>
+                        <h3>Аудит по МСФО</h3>
+                        <p>Подготовка и аудит финансовой отчётности по международным стандартам для работы с глобальными
+                            партнерами.</p>
+                        <div class="badge-container">
+                            <span class="badge">IFRS</span>
+                            <span class="badge">Global</span>
+                        </div>
+                    </div>
+                    <!-- 05 -->
+                    <div class="service-card fade-in-up delay-1">
+                        <span class="service-num">05</span>
+                        <h3>Due Diligence</h3>
+                        <p>Комплексная проверка финансово-хозяйственной деятельности объекта перед покупкой или
+                            инвестированием.</p>
+                        <div class="badge-container">
+                            <span class="badge">Сделки</span>
+                            <span class="badge">Анализ</span>
+                        </div>
+                    </div>
+                    <!-- 06 -->
+                    <div class="service-card fade-in-up delay-2">
+                        <span class="service-num">06</span>
+                        <h3>Управленческий аудит</h3>
+                        <p>Оценка эффективности бизнес-процессов, систем внутреннего контроля и качества управленческих
+                            решений.</p>
+                        <div class="badge-container">
+                            <span class="badge">Эффективность</span>
+                            <span class="badge">Контроль</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-stripe">
+            <div class="container stats-stripe-grid">
+                <div class="stat-stripe-item fade-in-up">
+                    <h4>50+</h4>
+                    <p>Аудитов проведено</p>
+                </div>
+                <div class="stat-stripe-item fade-in-up delay-1">
+                    <h4>5–15</h4>
+                    <p>Рабочих дней срок</p>
+                </div>
+                <div class="stat-stripe-item fade-in-up delay-2">
+                    <h4>0</h4>
+                    <p>Штрафов у клиентов</p>
+                </div>
+                <div class="stat-stripe-item fade-in-up delay-3">
+                    <h4>8+</h4>
+                    <p>Лет опыта</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Work -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center fade-in-up">Как мы работаем</h2>
+                <div class="process-grid" style="margin-top: 60px;">
+                    <div class="process-step fade-in-up">
+                        <span class="process-num">01</span>
+                        <h3 class="process-title">Планирование</h3>
+                        <p>Изучение специфики бизнеса, оценка объемов и предварительное выявление рисков. Срок: 2–3 дня.
+                        </p>
+                    </div>
+                    <div class="process-step fade-in-up delay-1">
+                        <span class="process-num">02</span>
+                        <h3 class="process-title">Сбор данных</h3>
+                        <p>Запрос документов, проведение интервью с ключевым персоналом, инвентаризации. Срок: 1–2
+                            недели.</p>
+                    </div>
+                    <div class="process-step fade-in-up delay-2">
+                        <span class="process-num">03</span>
+                        <h3 class="process-title">Анализ и проверка</h3>
+                        <p>Тестирование контролей, проверка проводок, сверка расчетов и аналитика. Срок: 1–2 недели.</p>
+                    </div>
+                    <div class="process-step fade-in-up delay-3">
+                        <span class="process-num">04</span>
+                        <h3 class="process-title">Отчётность</h3>
+                        <p>Выпуск финального аудиторского заключения с детальными рекомендациями.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Standards Section -->
+        <section class="section-padding" style="background: #111;">
+            <div class="container">
+                <h2 class="section-title text-center fade-in-up">Наши стандарты</h2>
+                <div class="standards-grid">
+                    <div class="why-card fade-in-up text-center">
+                        <span class="standard-val">МСФО</span>
+                        <p>Международные стандарты финансовой отчётности</p>
+                    </div>
+                    <div class="why-card fade-in-up delay-1 text-center">
+                        <span class="standard-val">НСФО</span>
+                        <p>Национальные стандарты финансовой отчётности КР</p>
+                    </div>
+                    <div class="why-card fade-in-up delay-2 text-center">
+                        <span class="standard-val">МСА</span>
+                        <p>Международные стандарты аудита</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center fade-in-up">Почему мы</h2>
+                <div class="why-grid">
+                    <div class="why-card fade-in-up">
+                        <h3>Независимость</h3>
+                        <p>Полная объективность и отсутствие конфликта интересов при проведении проверок.</p>
+                    </div>
+                    <div class="why-card fade-in-up delay-1">
+                        <h3>Конфиденциальность</h3>
+                        <p>Строгое соблюдение этических норм и защита любой бизнес-информации клиента.</p>
+                    </div>
+                    <div class="why-card fade-in-up delay-2">
+                        <h3>Опыт с налогами</h3>
+                        <p>Глубокая экспертиза в налоговом праве КР позволяет нам защищать клиентов от санкций.</p>
+                    </div>
+                    <div class="why-card fade-in-up delay-3">
+                        <h3>Больше чем проверка</h3>
+                        <p>Мы даем конкретные рекомендации по улучшению финансовой дисциплины компании.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding" style="background: #111;">
+            <div class="container">
+                <h2 class="section-title text-center fade-in-up">FAQ</h2>
+                <div class="faq-container" style="max-width: 800px; margin: 60px auto 0;">
+                    <div class="faq-item fade-in-up">
+                        <button class="faq-question">Чем отличается обязательный от инициативного аудита?</button>
+                        <div class="faq-answer">
+                            <p>Обязательный аудит проводится согласно закону, инициативный — по решению владельцев для
+                                самопроверки или перед важными сделками.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <button class="faq-question">Какие документы нужны для начала?</button>
+                        <div class="faq-answer">
+                            <p>На старте нам необходимы учредительные документы, учетная политика, оборотно-сальдовая
+                                ведомость и формы финансовой отчётности.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <button class="faq-question">Сколько времени занимает проверка?</button>
+                        <div class="faq-answer">
+                            <p>В среднем от 5 до 15 рабочих дней, в зависимости от объема данных и сложности структуры
+                                холдинга.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <button class="faq-question">Гарантируете ли конфиденциальность?</button>
+                        <div class="faq-answer">
+                            <p>Да, это фундаментальное правило нашей работы. Все обязательства по защите данных
+                                фиксируются в договоре.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <button class="faq-question">Помогаете ли при налоговых проверках?</button>
+                        <div class="faq-answer">
+                            <p>Да, наши аудиторы сопровождают клиентов в ходе проверок ГНС, помогая обосновать позиции и
+                                снизить риски доначислений.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding text-center">
+            <div class="container">
+                <h2 class="section-title fade-in-up">Заказать независимую проверку</h2>
+                <p class="fade-in-up delay-1" style="margin-bottom: 40px; color: var(--clr-text-main); opacity: 0.8;">
+                    Обеспечьте финансовую прозрачность и безопасность вашего бизнеса уже сегодня.</p>
+                <button class="btn btn-primary open-modal fade-in-up delay-2" onclick="openModal()">
+                    Заказать аудит
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/996705778553" class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+        aria-label="Связаться в WhatsApp">
+        <svg fill="currentColor" viewBox="0 0 448 512" width="24" height="24">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <a href="index.html" class="logo">US GROUP</a>
+                <p>Ваш надежный партнер в мире финансов и инвестиций.</p>
+                <a href="index.html" class="nav-link" style="margin-top: 20px; display: inline-block;">← На главную US
+                    GROUP</a>
+            </div>
+            <div class="footer-contacts">
+                <h4>Контакты</h4>
+                <p>Бишкек, Кыргызстан</p>
+                <p>Email: audit@usgroup.kg</p>
+                <p>Тел: +996 705 778 553</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> US GROUP. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-window">
+            <button class="close-modal" aria-label="Закрыть">&times;</button>
+            <h3>Заказать аудит</h3>
+            <p>Оставьте заявку, и мы обсудим детали проверки вашей компании.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Имя*" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="contact" placeholder="Телефон или Email*" required>
+                </div>
+                <div class="form-group">
+                    <select id="service" required>
+                        <option value="" disabled selected>Тип аудита*</option>
+                        <option value="mandatory">Обязательный аудит</option>
+                        <option value="voluntary">Инициативный аудит</option>
+                        <option value="tax">Налоговый аудит</option>
+                        <option value="ifrs">Аудит по МСФО</option>
+                        <option value="dd">Due Diligence</option>
+                        <option value="mgmt">Управленческий аудит</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="method">
+                        <option value="" disabled selected>Способ связи</option>
+                        <option value="phone">Телефон</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Комментарий" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-window">
+            <div class="modal-success">
+                <div class="success-icon">✓</div>
+                <h3>Спасибо!</h3>
+                <p>Ваша заявка принята. Специалист свяжется с вами для уточнения деталей.</p>
+                <button class="btn btn-primary btn-block" onclick="closeAllModals()">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US GROUP | Консалтинг, Аудит и Управление Капиталом</title>
+    <meta name="description"
+        content="US GROUP — ведущая материнская компания: юридический консалтинг, профессиональный аудит и эксклюзивное управление капиталом в недвижимости.">
+    <meta property="og:title" content="US GROUP | Консалтинг. Аудит. Капитал.">
+    <meta property="og:description" content="Стратегическое сопровождение бизнеса и инвестиции.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Vertical Dot Navigation -->
+    <nav class="dot-nav" aria-label="Навигация по секциям">
+        <a href="#hero" class="dot active" data-tooltip="Главная" aria-label="Главная"></a>
+        <a href="#about" class="dot" data-tooltip="О нас" aria-label="О нас"></a>
+        <a href="#philosophy" class="dot" data-tooltip="Философия" aria-label="Философия"></a>
+        <a href="#team" class="dot" data-tooltip="Команда" aria-label="Команда"></a>
+        <a href="#services" class="dot" data-tooltip="Направления" aria-label="Направления"></a>
+        <a href="#process" class="dot" data-tooltip="Как работаем" aria-label="Как работаем"></a>
+        <a href="#advantages" class="dot" data-tooltip="Преимущества" aria-label="Преимущества"></a>
+        <a href="#reviews" class="dot" data-tooltip="Отзывы" aria-label="Отзывы"></a>
+        <a href="faq.html" class="dot" data-tooltip="FAQ" aria-label="FAQ"></a>
+        <a href="#contacts" class="dot" data-tooltip="Контакты" aria-label="Контакты"></a>
+    </nav>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="US GROUP — на главную">US GROUP</a>
+
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#team" class="nav-link">Команда</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link">Подразделения ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="consult.html" class="dropdown-item">→ CONSULT</a>
+                        <a href="audit.html" class="dropdown-item">→ AUDIT</a>
+                        <a href="capital.html" class="dropdown-item">→ CAPITAL</a>
+                    </div>
+                </div>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false"
+                aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">&times;</button>
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link">О нас</a>
+            <a href="#team" class="mobile-link">Команда</a>
+            <a href="#services" class="mobile-link">Подразделения</a>
+            <a href="consult.html" class="mobile-link sub-link">CONSULT</a>
+            <a href="audit.html" class="mobile-link sub-link">AUDIT</a>
+            <a href="capital.html" class="mobile-link sub-link">CAPITAL</a>
+            <a href="faq.html" class="mobile-link">FAQ</a>
+            <a href="#contacts" class="mobile-link">Контакты</a>
+        </nav>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero" aria-label="Главный экран">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span class="word-wrap">
+                    <span class="word-reveal hero-title-accent">US</span>
+                </span>
+                <span class="word-wrap">
+                    <span class="word-reveal" style="animation-delay: 0.25s">GROUP</span>
+                </span>
+            </h1>
+            <div class="hero-tags fade-in-up delay-3" aria-label="Направления: Консалтинг, Аудит, Капитал">
+                <a href="consult.html" class="hero-tag">Консалтинг</a>
+                <span class="hero-tag-dot" aria-hidden="true">·</span>
+                <a href="audit.html" class="hero-tag">Аудит</a>
+                <span class="hero-tag-dot" aria-hidden="true">·</span>
+                <a href="capital.html" class="hero-tag">Капитал</a>
+            </div>
+            <p class="hero-subtitle fade-in-up delay-2">Стратегическое сопровождение, аудит и управление активами</p>
+            <button class="btn btn-primary open-modal fade-in-up delay-4" aria-haspopup="dialog" onclick="openModal()">
+                Связаться с нами
+            </button>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Перейти вниз">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-line-container fade-in-up" aria-hidden="true">
+                    <div class="about-line"></div>
+                </div>
+                <div class="about-text">
+                    <p class="fade-in-up">US GROUP — это материнская компания, объединяющая лидеров в сфере консалтинга,
+                        аудита и управления капиталом.</p>
+                    <p class="fade-in-up delay-1">Мы обеспечиваем комплексную поддержку бизнеса: от юридического
+                        сопровождения и получения лицензий профессиональных участников рынка до глубоких аудиторских
+                        проверок и эксклюзивных сделок с недвижимостью.</p>
+                    <p class="fade-in-up delay-2">Наша миссия — создавать условия, в которых деньги любят тишину, а
+                        бизнес получает надежный фундамент для роста.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CLIENTS (MARQUEE) ========== -->
+    <section class="clients-marquee-container fade-in-up" id="clients">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"
+                    style="color: var(--clr-accent); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 10px;">Нам
+                    доверяют</span>
+                <h2>10+ лет на рынке Кыргызстана</h2>
+                <div class="heading-line" style="margin: 20px auto;" aria-hidden="true"></div>
+            </div>
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <!-- NOMAD CAPITAL -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,4 56,20 30,36 4,20" stroke-width="1.5" />
+                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="9" font-weight="600" fill="currentColor"
+                                stroke="none">NC</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">NOMAD CAPITAL</p>
+                </div>
+                <!-- SILK ROAD BANK -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="8" y1="13" x2="52" y2="13" stroke-width="1.5" />
+                            <line x1="8" y1="20" x2="52" y2="20" stroke-width="1.5" />
+                            <line x1="8" y1="27" x2="52" y2="27" stroke-width="1.5" />
+                            <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="8" font-weight="700" fill="currentColor"
+                                stroke="none">SRB</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">SILK ROAD BANK</p>
+                </div>
+                <!-- ALFA STROY -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,5 55,33 5,33" stroke-width="1.5" />
+                            <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="8" font-weight="600" fill="currentColor"
+                                stroke="none">AS</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">ALFA STROY</p>
+                </div>
+                <!-- ASIA TRADING -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="30" x2="50" y2="10" stroke-width="1.5" />
+                            <polyline points="42,8 50,10 48,18" stroke-width="1.5" />
+                            <line x1="10" y1="10" x2="50" y2="30" stroke-width="1.5" />
+                            <polyline points="42,32 50,30 48,22" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">ASIA TRADING</p>
+                </div>
+                <!-- BISHKEK TOWER -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="22" y="8" width="16" height="28" stroke-width="1.5" />
+                            <polygon points="30,2 38,8 22,8" stroke-width="1.5" />
+                            <line x1="30" y1="2" x2="30" y2="0" stroke-width="1.5" />
+                            <rect x="26" y="20" width="8" height="16" fill="currentColor" opacity="0.3" stroke="none" />
+                        </svg>
+                    </div>
+                    <p class="client-name">BISHKEK TOWER</p>
+                </div>
+                <!-- FINPAY KG -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="20" r="14" stroke-width="1.5" />
+                            <polyline points="24,20 30,14 36,20" stroke-width="1.5" />
+                            <line x1="30" y1="14" x2="30" y2="28" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">FINPAY KG</p>
+                </div>
+                <!-- KYRTRANS -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="6" y1="20" x2="48" y2="20" stroke-width="2" />
+                            <polyline points="40,13 50,20 40,27" stroke-width="2" />
+                            <circle cx="14" cy="20" r="4" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">KYRTRANS</p>
+                </div>
+                <!-- ASIA HOLDING -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="6" width="44" height="28" stroke-width="1.5" />
+                            <rect x="18" y="13" width="24" height="14" stroke-width="1.5" />
+                            <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="7" font-weight="700" fill="currentColor"
+                                stroke="none">AH</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">ASIA HOLDING</p>
+                </div>
+                <!-- BISHKEK MALL -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="7" width="18" height="11" stroke-width="1.5" />
+                            <rect x="34" y="7" width="18" height="11" stroke-width="1.5" />
+                            <rect x="8" y="22" width="18" height="11" stroke-width="1.5" />
+                            <rect x="34" y="22" width="18" height="11" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">BISHKEK MALL</p>
+                </div>
+                <!-- MEDPLUS GROUP -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="5" width="10" height="30" rx="2" stroke-width="1.5" />
+                            <rect x="10" y="15" width="40" height="10" rx="2" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">MEDPLUS GROUP</p>
+                </div>
+
+                <!-- Repeated content for seamless marquee -->
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,4 56,20 30,36 4,20" stroke-width="1.5" />
+                            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="9" font-weight="600" fill="currentColor"
+                                stroke="none">NC</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">NOMAD CAPITAL</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="8" y1="13" x2="52" y2="13" stroke-width="1.5" />
+                            <line x1="8" y1="20" x2="52" y2="20" stroke-width="1.5" />
+                            <line x1="8" y1="27" x2="52" y2="27" stroke-width="1.5" />
+                            <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="8" font-weight="700" fill="currentColor"
+                                stroke="none">SRB</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">SILK ROAD BANK</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,5 55,33 5,33" stroke-width="1.5" />
+                            <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="8" font-weight="600" fill="currentColor"
+                                stroke="none">AS</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">ALFA STROY</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="30" x2="50" y2="10" stroke-width="1.5" />
+                            <polyline points="42,8 50,10 48,18" stroke-width="1.5" />
+                            <line x1="10" y1="10" x2="50" y2="30" stroke-width="1.5" />
+                            <polyline points="42,32 50,30 48,22" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">ASIA TRADING</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="22" y="8" width="16" height="28" stroke-width="1.5" />
+                            <polygon points="30,2 38,8 22,8" stroke-width="1.5" />
+                            <line x1="30" y1="2" x2="30" y2="0" stroke-width="1.5" />
+                            <rect x="26" y="20" width="8" height="16" fill="currentColor" opacity="0.3" stroke="none" />
+                        </svg>
+                    </div>
+                    <p class="client-name">BISHKEK TOWER</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="20" r="14" stroke-width="1.5" />
+                            <polyline points="24,20 30,14 36,20" stroke-width="1.5" />
+                            <line x1="30" y1="14" x2="30" y2="28" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">FINPAY KG</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="6" y1="20" x2="48" y2="20" stroke-width="2" />
+                            <polyline points="40,13 50,20 40,27" stroke-width="2" />
+                            <circle cx="14" cy="20" r="4" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">KYRTRANS</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="6" width="44" height="28" stroke-width="1.5" />
+                            <rect x="18" y="13" width="24" height="14" stroke-width="1.5" />
+                            <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+                                font-family="Montserrat,sans-serif" font-size="7" font-weight="700" fill="currentColor"
+                                stroke="none">AH</text>
+                        </svg>
+                    </div>
+                    <p class="client-name">ASIA HOLDING</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="7" width="18" height="11" stroke-width="1.5" />
+                            <rect x="34" y="7" width="18" height="11" stroke-width="1.5" />
+                            <rect x="8" y="22" width="18" height="11" stroke-width="1.5" />
+                            <rect x="34" y="22" width="18" height="11" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">BISHKEK MALL</p>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo-placeholder">
+                        <svg viewBox="0 0 60 40" width="60" height="40" fill="none" stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="5" width="10" height="30" rx="2" stroke-width="1.5" />
+                            <rect x="10" y="15" width="40" height="10" rx="2" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <p class="client-name">MEDPLUS GROUP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PHILOSOPHY ========== -->
+    <section class="philosophy section-padding" id="philosophy" aria-label="Наша философия">
+        <div class="container text-center philo-inner">
+            <blockquote class="philo-quote fade-in-up">
+                "Доверие невозможно купить —<br>его можно только заработать."
+            </blockquote>
+            <div class="philo-divider fade-in-up delay-1" aria-hidden="true"></div>
+            <blockquote class="philo-quote fade-in-up delay-2">
+                "Результат — единственное,<br>что имеет значение."
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ========== TEAM ========== -->
+    <section class="team section-padding" id="team">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Наша команда</h2>
+                <div class="heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="team-grid">
+
+                <div class="specialist-card fade-in-up" onclick="openSpecialistModal(0)">
+                    <div class="specialist-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400')">
+                    </div>
+                    <div class="specialist-info">
+                        <span class="specialist-division">US GROUP</span>
+                        <h3 class="specialist-name">Сатенбаев Улан</h3>
+                        <p class="specialist-role">Управляющий партнёр</p>
+                        <p class="team-desc">Более 10 лет опыта в праве. Нажмите для подробностей.</p>
+                    </div>
+                </div>
+
+                <!-- Specialist 2 -->
+                <div class="specialist-card fade-in-up delay-1" onclick="openSpecialistModal(1)">
+                    <div class="specialist-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400')">
+                    </div>
+                    <div class="specialist-info">
+                        <span class="specialist-division">AUDIT</span>
+                        <h3 class="specialist-name">Айнура Бекова</h3>
+                        <p class="specialist-role">Руководитель подразделения</p>
+                        <p class="team-desc">Эксперт по аудиту и МСФО. Нажмите для подробностей.</p>
+                    </div>
+                </div>
+
+                <!-- Specialist 3 -->
+                <div class="specialist-card fade-in-up delay-2" onclick="openSpecialistModal(2)">
+                    <div class="specialist-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400')">
+                    </div>
+                    <div class="specialist-info">
+                        <span class="specialist-division">CAPITAL</span>
+                        <h3 class="specialist-name">Рустам Асанов</h3>
+                        <p class="specialist-role">Инвестиционный директор</p>
+                        <p class="team-desc">Управление активами и инвест-проектами. Нажмите для подробностей.</p>
+                    </div>
+                </div>
+
+                <!-- Specialist 4 -->
+                <div class="specialist-card fade-in-up delay-3" onclick="openSpecialistModal(3)">
+                    <div class="specialist-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400')">
+                    </div>
+                    <div class="specialist-info">
+                        <span class="specialist-division">CONSULT</span>
+                        <h3 class="specialist-name">Дмитрий Кравцов</h3>
+                        <p class="specialist-role">Юридический консультант</p>
+                        <p class="team-desc">Финтех и корпоративное регулирование. Нажмите для подробностей.</p>
+                    </div>
+                </div>
+
+                <!-- Specialist 5 -->
+                <div class="specialist-card fade-in-up delay-4" onclick="openSpecialistModal(4)">
+                    <div class="specialist-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=400')">
+                    </div>
+                    <div class="specialist-info">
+                        <span class="specialist-division">US GROUP</span>
+                        <h3 class="specialist-name">Елена Морозова</h3>
+                        <p class="specialist-role">HR-директор</p>
+                        <p class="team-desc">Эксперт по кадрам и культуре. Нажмите для подробностей.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Направления US GROUP</h2>
+                <div class="heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="divisions-list">
+                <!-- CONSULT -->
+                <div class="division-card fade-in-up">
+                    <div class="division-number">01</div>
+                    <div class="division-info">
+                        <span class="service-tag">US GROUP CONSULT</span>
+                        <h4>Юридическое сопровождение финтех-проектов</h4>
+                        <p>Полный цикл юридического сопровождения для компаний, работающих на финансовом рынке
+                            Кыргызстана. Мы специализируемся на получении лицензий профессиональных участников рынка
+                            ценных бумаг — депозитариев, брокеров, доверительных управляющих.</p>
+                        <ul class="division-services">
+                            <li>Лицензирование</li>
+                            <li>Комплаенс</li>
+                            <li>Договорное право</li>
+                            <li>Регистрация компаний</li>
+                        </ul>
+                        <button class="btn btn-outline open-modal division-cta">Получить консультацию</button>
+                    </div>
+                </div>
+
+                <!-- AUDIT -->
+                <div class="division-card fade-in-up delay-1">
+                    <div class="division-number">02</div>
+                    <div class="division-info">
+                        <span class="service-tag">US GROUP AUDIT</span>
+                        <h4>Профессиональный аудит и налоговый консалтинг</h4>
+                        <p>Независимая аудиторская проверка, которая даёт вам объективную картину финансового здоровья
+                            бизнеса. Выявляем скрытые налоговые риски, оптимизируем процессы и готовим отчётность по
+                            стандартам МСФО.</p>
+                        <ul class="division-services">
+                            <li>Финансовый аудит</li>
+                            <li>Налоговый аудит</li>
+                            <li>МСФО отчетность</li>
+                            <li>Due Diligence</li>
+                        </ul>
+                        <button class="btn btn-outline open-modal division-cta">Заказать проверку</button>
+                    </div>
+                </div>
+
+                <!-- CAPITAL -->
+                <div class="division-card fade-in-up delay-2">
+                    <div class="division-number">03</div>
+                    <div class="division-info">
+                        <span class="service-tag">US GROUP CAPITAL</span>
+                        <h4>Управление активами в премиальной недвижимости</h4>
+                        <p>Закрытый клуб для состоятельных инвесторов. Прямой доступ к эксклюзивным объектам
+                            коммерческой
+                            и жилой недвижимости. Полное юридическое сопровождение каждой сделки от анализа до
+                            подписания.</p>
+                        <ul class="division-services">
+                            <li>Коммерческая недвижимость</li>
+                            <li>Жилой фонд</li>
+                            <li>Сопровождение сделок</li>
+                            <li>Инвест-аналитика</li>
+                        </ul>
+                        <button class="btn btn-outline open-modal division-cta">Узнать подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROCESS ========== -->
+    <section class="process section-padding" id="process">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Как мы работаем</h2>
+                <div class="heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="process-grid">
+                <div class="process-step fade-in-up">
+                    <div class="process-num">01</div>
+                    <h3 class="process-title">Заявка</h3>
+                    <p class="process-desc">Связываемся в течение 24 часов для первичного знакомства.</p>
+                </div>
+                <div class="process-step fade-in-up delay-1">
+                    <div class="process-num">02</div>
+                    <h3 class="process-title">Консультация</h3>
+                    <p class="process-desc">Бесплатная встреча для предложения оптимального решения.</p>
+                </div>
+                <div class="process-step fade-in-up delay-2">
+                    <div class="process-num">03</div>
+                    <h3 class="process-title">Анализ</h3>
+                    <p class="process-desc">Изучаем финансы и риски, влияющие на результат.</p>
+                </div>
+                <div class="process-step fade-in-up delay-3">
+                    <div class="process-num">04</div>
+                    <h3 class="process-title">Результат</h3>
+                    <p class="process-desc">Готовое решение с конкретными цифрами и выводами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ADVANTAGES & STATS ========== -->
+    <section class="advantages section-padding" id="advantages">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Преимущества</h2>
+                <div class="heading-line" aria-hidden="true"></div>
+            </div>
+            <div class="adv-grid">
+                <div class="adv-card fade-in-up">
+                    <span class="adv-num" aria-hidden="true">01</span>
+                    <p>Мы не работаем с массовым рынком</p>
+                </div>
+                <div class="adv-card fade-in-up delay-1">
+                    <span class="adv-num" aria-hidden="true">02</span>
+                    <p>Результат, а не процесс</p>
+                </div>
+                <div class="adv-card fade-in-up delay-2">
+                    <span class="adv-num" aria-hidden="true">03</span>
+                    <p>Эксклюзивные предложения напрямую</p>
+                </div>
+                <div class="adv-card fade-in-up delay-3">
+                    <span class="adv-num" aria-hidden="true">04</span>
+                    <p>Эффективность в каждой детали</p>
+                </div>
+            </div>
+
+            <div class="stats-grid" id="stats">
+                <div class="stat-item fade-in-up">
+                    <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
+                    <p class="stat-label">Завершённых аудитов</p>
+                </div>
+                <div class="stat-item fade-in-up delay-1">
+                    <div class="stat-number"><span class="counter" data-target="126">0</span></div>
+                    <p class="stat-label">Бизнесам помогли</p>
+                </div>
+                <div class="stat-item fade-in-up delay-2">
+                    <div class="stat-number"><span class="counter" data-target="17">0</span></div>
+                    <p class="stat-label">Премиум-объектов реализовано</p>
+                </div>
+                <div class="stat-item fade-in-up delay-3">
+                    <div class="stat-number"><span class="counter" data-target="350">0</span>М</div>
+                    <p class="stat-label">Инвестировано клиентами</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REVIEWS (CAROUSEL) ========== -->
+    <section class="reviews section-padding" id="reviews">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Что говорят клиенты</h2>
+                <div class="heading-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="reviews-carousel fade-in-up">
+                <button class="carousel-btn prev" aria-label="Предыдущий отзыв">&#10094;</button>
+                <button class="carousel-btn next" aria-label="Следующий отзыв">&#10095;</button>
+
+                <div class="carousel-track-container">
+                    <div class="carousel-track">
+                        <!-- 1 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">US GROUP провели полный финансовый аудит нашей компании за рекордные
+                                сроки. Нашли налоговые риски, о которых мы даже не догадывались. Сэкономили несколько
+                                миллионов сомов.</p>
+                            <div class="review-info">
+                                <strong>Алмаз Токтосунов</strong>
+                                <span>Директор, ООО «АльфаСтрой»</span>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Благодаря команде US GROUP приобрёл объект недвижимости напрямую от
+                                застройщика без посредников. Сделка прошла прозрачно, юридически чисто и выгодно.</p>
+                            <div class="review-info">
+                                <strong>Эрлан Джумабеков</strong>
+                                <span>Частный инвестор</span>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Работаем с US GROUP по сопровождению бизнеса уже три года. Ценю их за
+                                конкретику — никаких пустых встреч, только реальные решения и результаты.</p>
+                            <div class="review-info">
+                                <strong>Гульнара Асанова</strong>
+                                <span>Владелец, сеть аптек «МедПлюс»</span>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Налоговый аудит от US GROUP AUDIT выявил переплаты за 2 года. Вернули
+                                значительную сумму. Работают чётко и без лишних слов.</p>
+                            <div class="review-info">
+                                <strong>Бакыт Мамытбеков</strong>
+                                <span>Финансовый директор ООО «КырТранс»</span>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">US GROUP CONSULT помогли нам получить брокерскую лицензию за 3
+                                месяца. Без их опыта мы бы потратили год. Команда знает регулятора изнутри.</p>
+                            <div class="review-info">
+                                <strong>Асель Токоева</strong>
+                                <span>Основатель стартапа FinPay</span>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Приобрёл коммерческий объект через US GROUP CAPITAL. Сделка прошла
+                                чисто, юридически всё проверили до подписания. Рекомендую.</p>
+                            <div class="review-info">
+                                <strong>Марат Джакыпов</strong>
+                                <span>Частный инвестор</span>
+                            </div>
+                        </div>
+                        <!-- 7 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Провели due diligence перед крупным слиянием. Отчёт был детальный,
+                                выводы — конкретные. Сэкономили нас от рискованной сделки.</p>
+                            <div class="review-info">
+                                <strong>Нуржан Сейткали</strong>
+                                <span>CEO Asia Holding</span>
+                            </div>
+                        </div>
+                        <!-- 8 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Ежегодно работаем с US GROUP AUDIT по внешнему аудиту. Всегда в срок,
+                                всегда конфиденциально, всегда профессионально.</p>
+                            <div class="review-info">
+                                <strong>Динара Эркинбекова</strong>
+                                <span>Директор по развитию SILK ROAD BANK</span>
+                            </div>
+                        </div>
+                        <!-- 9 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Помогли оформить крупный коммерческий объект под управление. Весь
+                                процесс от А до Я — юристы, аудит, регистрация. Один партнёр закрыл все задачи.</p>
+                            <div class="review-info">
+                                <strong>Тимур Абдрахманов</strong>
+                                <span>Управляющий ТРЦ Bishkek Mall</span>
+                            </div>
+                        </div>
+                        <!-- 10 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Когда пришла налоговая проверка — US GROUP AUDIT встали рядом.
+                                Благодаря их сопровождению всё прошло без штрафов.</p>
+                            <div class="review-info">
+                                <strong>Канат Осмонов</strong>
+                                <span>Владелец сети ресторанов</span>
+                            </div>
+                        </div>
+                        <!-- 11 -->
+                        <div class="review-card">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Искала объект для пассивного дохода. US GROUP CAPITAL нашли вариант с
+                                доходностью выше рынка. Сделка была закрыта за 3 недели.</p>
+                            <div class="review-info">
+                                <strong>Жылдыз Асанова</strong>
+                                <span>Инвестор в недвижимость</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTS / FOOTER ========== -->
+    <footer class="contacts" id="contacts">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="contacts-wrapper">
+                    <div class="contacts-cta fade-in-up">
+                        <h2>Готовы начать сотрудничество?</h2>
+                        <button class="btn btn-primary open-modal" aria-haspopup="dialog">Связаться с нами</button>
+                    </div>
+
+                    <div class="contacts-info fade-in-up">
+                        <div class="info-block">
+                            <span class="info-label">Телефон</span>
+                            <a href="tel:+996705778553" class="info-value">+996 705 778 553</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:info@usgroup.kg" class="info-value">info@usgroup.kg</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="info-label">Адрес</span>
+                            <address class="info-value">г. Бишкек, ул. Грибоедова 8</address>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://wa.me/996705778553" class="social-icon" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-map" id="map">
+            <div class="container">
+                <h3 class="fade-in-up"
+                    style="margin-bottom: 40px; text-align: center; font-family: var(--font-heading); font-size: 2rem;">
+                    Мы находимся здесь</h3>
+                <div class="map-wrapper fade-in-up delay-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.939223847844!2d74.60725!3d42.857675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7c56972410f%3A0xe54796395e92be97!2zOCDRg9C7LiDQk9GA0LjQsdC-0LXQtNC-0LLQsCwg0JHQuNGI0LrQtdC6IDcyMDAxNQ!5e0!3m2!1sru!2skg!4v1700000000000!5m2!1sru!2skg"
+                        width="100%" height="350" style="border:0; filter: grayscale(80%) contrast(1.1);"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> US GROUP. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Фиксированная кнопка WhatsApp -->
+    <a href="https://wa.me/996705778553" class="fixed-wa" target="_blank" rel="noopener noreferrer"
+        aria-label="Написать в WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"
+            aria-hidden="true">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх" style="display:none;">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle"
+        aria-hidden="true">
+        <div class="modal-window">
+            <button class="modal-close" id="modalClose" aria-label="Закрыть форму">&times;</button>
+            <h3 class="modal-title" id="modalTitle">Свяжитесь с нами</h3>
+            <p class="modal-subtitle">Оставьте заявку, и мы обсудим индивидуальные решения для вас.</p>
+
+            <!--
+                Чтобы форма отправляла заявки на email:
+                1. Зарегистрируйтесь на formspree.io
+                2. Замените action на: action="https://formspree.io/f/ВАШ_ID"
+                3. Добавьте method="POST"
+            -->
+            <form id="contactForm" class="contact-form" novalidate>
+
+                <div class="form-group">
+                    <label for="formName" class="form-label">Имя *</label>
+                    <input type="text" id="formName" name="name" required placeholder="Ваше имя"
+                        autocomplete="given-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="formContact" class="form-label">Телефон или Email *</label>
+                    <input type="text" id="formContact" name="contact" required placeholder="Телефон или Email"
+                        autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label for="formMethod" class="form-label">Как с вами связаться?</label>
+                    <select id="formMethod" name="method">
+                        <option value="" disabled selected>Выберите способ</option>
+                        <option value="phone">Звонок на телефон</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="formComment" class="form-label">Комментарий</label>
+                    <textarea id="formComment" name="comment" rows="3"
+                        placeholder="Опишите ваш запрос (необязательно)"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+            </form>
+
+            <div class="modal-success" id="modalSuccess" style="display:none;" role="alert">
+                <div class="success-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h4>Спасибо!</h4>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specialist Modal -->
+    <div class="modal-overlay" id="specialistModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-window wide">
+            <button class="modal-close" onclick="closeSpecialistModal()"
+                aria-label="Закрыть информацию о специалисте">&times;</button>
+            <div id="specialistModalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

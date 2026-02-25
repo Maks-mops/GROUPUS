@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Часто задаваемые вопросы | US GROUP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Ответы на частые вопросы об аудите, инвестициях и юридических услугах — US GROUP Бишкек.">
+    <meta property="og:title" content="FAQ | US GROUP">
+    <meta property="og:description" content="Часто задаваемые вопросы о консалтинге, аудите и управлении капиталом.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html#hero" class="logo">US GROUP</a>
+            <nav class="main-nav">
+                <a href="index.html#about" class="nav-link">О нас</a>
+                <a href="index.html#team" class="nav-link">Команда</a>
+                <div class="nav-dropdown">
+                    <a href="index.html#services" class="nav-link">Подразделения ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="consult.html" class="dropdown-item">→ CONSULT</a>
+                        <a href="audit.html" class="dropdown-item">→ AUDIT</a>
+                        <a href="capital.html" class="dropdown-item">→ CAPITAL</a>
+                    </div>
+                </div>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="index.html#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">&times;</button>
+        <nav class="mobile-nav-links">
+            <a href="index.html#about" class="mobile-link">О нас</a>
+            <a href="index.html#team" class="mobile-link">Команда</a>
+            <a href="index.html#services" class="mobile-link">Подразделения</a>
+            <a href="consult.html" class="mobile-link sub-link">CONSULT</a>
+            <a href="audit.html" class="mobile-link sub-link">AUDIT</a>
+            <a href="capital.html" class="mobile-link sub-link">CAPITAL</a>
+            <a href="faq.html" class="mobile-link active">FAQ</a>
+            <a href="index.html#contacts" class="mobile-link">Контакты</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="faq-hero">
+            <div class="container text-center">
+                <h1 class="hero-title fade-in-up">FAQ</h1>
+                <p class="hero-tagline fade-in-up delay-1">Ответы на ключевые вопросы бизнеса и инвестиций</p>
+                <div class="heading-line" style="margin: 30px auto;" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section class="faq-content section-padding">
+            <div class="container" style="max-width: 900px;">
+
+                <!-- Category 1: AUDIT -->
+                <div class="faq-category active">
+                    <button class="faq-category-header">
+                        <span>Аудит</span>
+                        <span class="faq-cat-icon">&#9662;</span>
+                    </button>
+                    <div class="faq-category-body">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Сколько времени занимает аудит? <span
+                                        class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>В среднем от 5 до 15 рабочих дней. Точные сроки зависят от масштаба бизнеса и
+                                        сложности запроса.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Какие документы нужны для начала
+                                    аудита? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Уставные документы, финансовую отчетность, оборотно-сальдовые ведомости и
+                                        налоговые декларации за проверяемый период.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Чем отличается внешний аудит от
+                                    внутреннего? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Внешний аудит проводится независимой компанией для подтверждения достоверности
+                                        отчетности, внутренний — для контроля эффективности процессов внутри
+                                        организации.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: CAPITAL -->
+                <div class="faq-category">
+                    <button class="faq-category-header">
+                        <span>Инвестиции в недвижимость</span>
+                        <span class="faq-cat-icon">&#9662;</span>
+                    </button>
+                    <div class="faq-category-body">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Какой минимальный порог для
+                                    инвестиций? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Мы ориентируемся на эксклюзивные предложения, минимальный порог входа начинается
+                                        от $50 000 для прямых сделок с недвижимостью.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Как вы отбираете объекты для
+                                    клиентов? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Проводим скоринг: локация, юридическая чистота застройщика, ликвидность объекта и
+                                        потенциал доходности (ROI).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: CONSULT -->
+                <div class="faq-category">
+                    <button class="faq-category-header">
+                        <span>Юридические услуги</span>
+                        <span class="faq-cat-icon">&#9662;</span>
+                    </button>
+                    <div class="faq-category-body">
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Что такое лицензия профессионального
+                                    участника? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Разрешение от регулятора на право заниматься брокерской, дилерской деятельностью,
+                                        доверительным управлением или услугами депозитария.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">Сколько времени занимает получение
+                                    лицензии? <span class="faq-icon">+</span></button>
+                                <div class="faq-answer">
+                                    <p>Обычно от 2-х до 4-х месяцев, включая этап подготовки внутренних положений и
+                                        процедур компании в соответствии с требованиями НБКР.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="faq-footer-cta">
+            <div class="container">
+                <h2>Не нашли ответ на свой вопрос?</h2>
+                <p style="margin: 20px 0 40px; opacity: 0.8;">Оставьте заявку, и наши специалисты проконсультируют вас
+                    индивидуально.</p>
+                <button class="btn btn-primary open-modal">Задать свой вопрос</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="contacts" id="contacts">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="contacts-wrapper">
+                    <div class="contacts-info fade-in-up">
+                        <div class="info-block">
+                            <span class="info-label">Телефон</span>
+                            <a href="tel:+996705778553" class="info-value">+996 705 778 553</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:info@usgroup.kg" class="info-value">info@usgroup.kg</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="info-label">Адрес</span>
+                            <address class="info-value">г. Бишкек, ул. Грибоедова 8</address>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://wa.me/996705778553" class="social-icon" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> US GROUP. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Buttons -->
+    <a href="https://wa.me/996705778553" class="fixed-wa" target="_blank" rel="noopener noreferrer"
+        aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" fill="none">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal-window">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h3 class="modal-title">Свяжитесь с нами</h3>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="faqName" class="form-label">Имя *</label>
+                    <input type="text" id="faqName" name="name" required placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="faqContact" class="form-label">Телефон или Email *</label>
+                    <input type="text" id="faqContact" name="contact" required placeholder="Телефон или Email">
+                </div>
+                <div class="form-group">
+                    <label for="faqMethod" class="form-label">Как с вами связаться?</label>
+                    <select id="faqMethod" name="method">
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="phone">Звонок</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="faqComment" class="form-label">Комментарий</label>
+                    <textarea id="faqComment" name="comment" rows="3" placeholder="Ваш запрос"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+            </form>
+            <div class="modal-success" id="modalSuccess" style="display:none; text-align:center; padding: 40px 0;">
+                <h4 style="color: var(--clr-accent); margin-bottom: 10px;">Спасибо!</h4>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
